@@ -17,9 +17,9 @@ const CustomSelect = (props: Select) => {
   };
 
   return (
-    <div className="flex items-baseline gap-3 text-sm">
-      <p className="min-w-9">{label}</p>
-      <Select style={{ width: 150 }} defaultValue={"전체"} value={value} onChange={handleChange} options={options} />
+    <div className="grid items-center grid-cols-[1fr_4fr] gap-3 text-sm">
+      <p>{label}</p>
+      <Select style={{ width: 160 }} defaultValue={"전체"} value={value} onChange={handleChange} options={options} />
     </div>
   );
 };

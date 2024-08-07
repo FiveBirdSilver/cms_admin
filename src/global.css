@@ -62,3 +62,15 @@ body {
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
 }
+
+.ant-modal .ant-modal-body {
+  padding: 15px;
+}
+
+.ant-btn-primary {
+  background: #6ab8fd !important;
+}
+
+.ant-modal .ant-modal-content {
+  position: relative !important;
+}
