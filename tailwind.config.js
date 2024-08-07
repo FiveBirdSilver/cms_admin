@@ -10,11 +10,8 @@ export default {
         PretendardR: ["PretendardR"],
         PretendardM: ["PretendardM"],
       },
-      gridTemplateColumns: {
-        main_grid: "6fr 4fr",
-      },
       minHeight: {
-        main_box: "550px",
+        main_box: "500px",
       },
     },
   },
