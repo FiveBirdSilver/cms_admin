@@ -1,71 +1,37 @@
-export const channelcolumns = [
-  {
-    title: "이름",
-    dataIndex: "name",
-    align: "center",
-  },
-  {
-    title: "URL",
-    dataIndex: "url",
-    align: "center",
-  },
-  {
-    title: "그룹",
-    dataIndex: "group",
-    align: "center",
-  },
-  {
-    title: "수집여부",
-    dataIndex: "flag",
-    align: "center",
-  },
-  {
-    title: "수정",
-    dataIndex: "update",
-    align: "center",
-  },
-  {
-    title: "삭제",
-    dataIndex: "delete",
-    align: "center",
-  },
-];
-
 export const channeldata = [
   {
-    key: "1",
+    key: 1,
     name: "네이버",
     url: "www.naver.com",
     group: "한국",
     flag: "수집",
-    update: "수정",
-    delete: "삭제",
   },
   {
-    key: "2",
+    key: 2,
     name: "다음",
     url: "www.naver.com",
-    group: "한국",
+    group: "미국",
     flag: "수집",
-    update: "수정",
-    delete: "삭제",
   },
   {
-    key: "3",
+    key: 3,
     name: "골든플래닛",
     url: "www.naver.com",
-    group: "한국",
+    group: "미국",
     flag: "수집",
-    update: "수정",
-    delete: "삭제",
   },
   {
-    key: "4",
+    key: 4,
     name: "어쩌고",
     url: "www.naver.com",
-    group: "한국",
+    group: "미국",
     flag: "수집",
-    update: "수정",
-    delete: "삭제",
   },
+];
+
+export const channelSelect = [
+  { value: "전체", label: "전체" },
+  { value: "네이버", label: "네이버" },
+  { value: "다음", label: "다음" },
+  { value: "골든플래닛", label: "골든플래닛" },
 ];
