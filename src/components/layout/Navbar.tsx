@@ -29,23 +29,21 @@ const Navbar = ({ children }: { children: ReactNode }) => {
     },
   ];
   return (
-    <div className="w-full h-full">
-      <>
-        <div className="fixed top-0 w-full h-16 bg-white border-b border-gray-100">
-          <div className="flex items-center py-2 mx-auto my-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl font-PretendardM">
-            <Menu
-              onClick={onClick}
-              selectedKeys={[current]}
-              mode="horizontal"
-              items={items}
-              className="font-PretendardR"
-            />
-          </div>
+    <div className="w-full h-screen">
+      <div className="fixed top-0 z-50 w-full h-16 bg-white border-b border-gray-100">
+        <div className="flex items-center py-2 mx-auto my-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl font-PretendardM">
+          <Menu
+            onClick={onClick}
+            selectedKeys={[current]}
+            mode="horizontal"
+            items={items}
+            className="font-PretendardR"
+          />
         </div>
-        <div className="flex w-full py-2 pt-24 mx-auto my-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
-          {children}
-        </div>
-      </>
+      </div>
+      <div className="flex w-full h-full py-2 pt-24 pb-12 mx-auto my-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
+        {children}
+      </div>
     </div>
   );
 };

@@ -1,24 +1,39 @@
 {
   "list": [
-    {
-      "key": 1,
-      "name": "네이버",
-      "count": 32
-    },
-    {
-      "key": 2,
-      "name": "다음",
-      "count": 42
-    },
-    {
-      "key": 3,
-      "name": "골든플래닛",
-      "count": 32
-    },
-    {
-      "key": 4,
-      "name": "어쩌고",
-      "count": 99
-    }
+    { "id": 1, "name": "네이버", "count": 32 },
+    { "id": 2, "name": "다음", "count": 42 },
+    { "id": 3, "name": "골든플래닛", "count": 32 },
+    { "id": 4, "name": "어쩌고", "count": 99 },
+    { "id": 5, "name": "구글", "count": 28 },
+    { "id": 6, "name": "네이트", "count": 45 },
+    { "id": 7, "name": "지마켓", "count": 37 },
+    { "id": 8, "name": "11번가", "count": 52 },
+    { "id": 9, "name": "쿠팡", "count": 40 },
+    { "id": 10, "name": "배달의민족", "count": 33 },
+    { "id": 11, "name": "위메프", "count": 29 },
+    { "id": 12, "name": "인터파크", "count": 41 },
+    { "id": 13, "name": "티몬", "count": 36 },
+    { "id": 14, "name": "엘지전자", "count": 47 },
+    { "id": 15, "name": "삼성전자", "count": 53 },
+    { "id": 16, "name": "소니", "count": 44 },
+    { "id": 17, "name": "애플", "count": 51 },
+    { "id": 18, "name": "마이크로소프트", "count": 39 },
+    { "id": 19, "name": "인텔", "count": 35 },
+    { "id": 20, "name": "퀄컴", "count": 48 },
+    { "id": 21, "name": "삼성SDI", "count": 31 },
+    { "id": 22, "name": "LG디스플레이", "count": 50 },
+    { "id": 23, "name": "네이버페이", "count": 38 },
+    { "id": 24, "name": "카카오", "count": 46 },
+    { "id": 25, "name": "그린카", "count": 27 },
+    { "id": 26, "name": "타다", "count": 49 },
+    { "id": 27, "name": "알리바바", "count": 33 },
+    { "id": 28, "name": "아마존", "count": 58 },
+    { "id": 29, "name": "이베이", "count": 41 },
+    { "id": 30, "name": "익스피디아", "count": 30 },
+    { "id": 31, "name": "트립어드바이저", "count": 27 },
+    { "id": 32, "name": "부킹닷컴", "count": 43 },
+    { "id": 33, "name": "호텔스닷컴", "count": 49 },
+    { "id": 34, "name": "스카이스캐너", "count": 32 },
+    { "id": 35, "name": "플립카트", "count": 57 }
   ]
 }

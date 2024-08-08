@@ -1,33 +1,40 @@
 {
   "table": [
-    {
-      "key": 1,
-      "name": "네이버",
-      "url": "www.naver.com",
-      "group": "한국",
-      "flag": "수집"
-    },
-    {
-      "key": 2,
-      "name": "다음",
-      "url": "www.naver.com",
-      "group": "미국",
-      "flag": "수집"
-    },
-    {
-      "key": 3,
-      "name": "골든플래닛",
-      "url": "www.naver.com",
-      "group": "미국",
-      "flag": "수집"
-    },
-    {
-      "key": 4,
-      "name": "어쩌고",
-      "url": "www.naver.com",
-      "group": "미국",
-      "flag": "중지"
-    }
+    { "key": 1, "name": "네이버", "url": "www.naver.com", "group": "한국", "flag": "수집" },
+    { "key": 2, "name": "다음", "url": "www.daum.net", "group": "한국", "flag": "수집" },
+    { "key": 3, "name": "골든플래닛", "url": "www.goldenplanet.com", "group": "미국", "flag": "수집" },
+    { "key": 4, "name": "어쩌고", "url": "www.eojjeogo.com", "group": "미국", "flag": "중지" },
+    { "key": 5, "name": "구글", "url": "www.google.com", "group": "미국", "flag": "수집" },
+    { "key": 6, "name": "네이트", "url": "www.nate.com", "group": "한국", "flag": "수집" },
+    { "key": 7, "name": "지마켓", "url": "www.gmarket.co.kr", "group": "한국", "flag": "수집" },
+    { "key": 8, "name": "11번가", "url": "www.11st.co.kr", "group": "한국", "flag": "수집" },
+    { "key": 9, "name": "쿠팡", "url": "www.coupang.com", "group": "한국", "flag": "수집" },
+    { "key": 10, "name": "배달의민족", "url": "www.baedalminjok.com", "group": "한국", "flag": "수집" },
+    { "key": 11, "name": "위메프", "url": "www.wemakeprice.com", "group": "한국", "flag": "중지" },
+    { "key": 12, "name": "인터파크", "url": "www.interpark.com", "group": "한국", "flag": "수집" },
+    { "key": 13, "name": "티몬", "url": "www.tmon.co.kr", "group": "한국", "flag": "수집" },
+    { "key": 14, "name": "엘지전자", "url": "www.lge.co.kr", "group": "한국", "flag": "수집" },
+    { "key": 15, "name": "삼성전자", "url": "www.samsung.com", "group": "한국", "flag": "수집" },
+    { "key": 16, "name": "소니", "url": "www.sony.com", "group": "일본", "flag": "수집" },
+    { "key": 17, "name": "애플", "url": "www.apple.com", "group": "미국", "flag": "수집" },
+    { "key": 18, "name": "마이크로소프트", "url": "www.microsoft.com", "group": "미국", "flag": "수집" },
+    { "key": 19, "name": "인텔", "url": "www.intel.com", "group": "미국", "flag": "수집" },
+    { "key": 20, "name": "퀄컴", "url": "www.qualcomm.com", "group": "미국", "flag": "수집" },
+    { "key": 21, "name": "삼성SDI", "url": "www.samsungsdi.com", "group": "한국", "flag": "수집" },
+    { "key": 22, "name": "LG디스플레이", "url": "www.lgdisplay.com", "group": "한국", "flag": "수집" },
+    { "key": 23, "name": "네이버페이", "url": "www.naverpay.com", "group": "한국", "flag": "수집" },
+    { "key": 24, "name": "카카오", "url": "www.kakao.com", "group": "한국", "flag": "수집" },
+    { "key": 25, "name": "그린카", "url": "www.greencar.co.kr", "group": "한국", "flag": "중지" },
+    { "key": 26, "name": "타다", "url": "www.tada.com", "group": "한국", "flag": "중지" },
+    { "key": 27, "name": "알리바바", "url": "www.alibaba.com", "group": "중국", "flag": "수집" },
+    { "key": 28, "name": "아마존", "url": "www.amazon.com", "group": "미국", "flag": "수집" },
+    { "key": 29, "name": "이베이", "url": "www.ebay.com", "group": "미국", "flag": "수집" },
+    { "key": 30, "name": "익스피디아", "url": "www.expedia.com", "group": "미국", "flag": "수집" },
+    { "key": 31, "name": "트립어드바이저", "url": "www.tripadvisor.com", "group": "미국", "flag": "수집" },
+    { "key": 32, "name": "부킹닷컴", "url": "www.booking.com", "group": "네덜란드", "flag": "수집" },
+    { "key": 33, "name": "호텔스닷컴", "url": "www.hotels.com", "group": "미국", "flag": "수집" },
+    { "key": 34, "name": "스카이스캐너", "url": "www.skyscanner.net", "group": "영국", "flag": "수집" },
+    { "key": 35, "name": "플립카트", "url": "www.flipkart.com", "group": "인도", "flag": "수집" }
   ],
   "select": [
     { "value": "전체", "label": "전체" },

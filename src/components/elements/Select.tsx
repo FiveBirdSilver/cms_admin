@@ -7,10 +7,11 @@ interface Select {
     label: string;
   }[];
   value?: string;
+  defaultValue?: string;
 }
 
 const CustomSelect = (props: Select) => {
-  const { label, options, value } = props;
+  const { label, options, value, defaultValue } = props;
 
   const handleChange = (value: string) => {
     console.log(`selected ${value}`);
@@ -18,8 +19,14 @@ const CustomSelect = (props: Select) => {
 
   return (
     <div className="grid items-center grid-cols-[1fr_4fr] gap-3 text-sm">
-      <p>{label}</p>
-      <Select style={{ width: 160 }} defaultValue={"전체"} value={value} onChange={handleChange} options={options} />
+      <p className="text-center">{label}</p>
+      <Select
+        style={{ width: 160 }}
+        defaultValue={defaultValue}
+        value={value}
+        onChange={handleChange}
+        options={options}
+      />
     </div>
   );
 };

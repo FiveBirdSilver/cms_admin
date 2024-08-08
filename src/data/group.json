@@ -1,16 +1,12 @@
 {
   "list": [
     {
-      "key": 1,
-      "name": "한국",
-      "update": "수정",
-      "delete": "삭제"
+      "id": 1,
+      "name": "한국"
     },
     {
-      "key": 2,
-      "name": "미국",
-      "update": "수정",
-      "delete": "삭제"
+      "id": 2,
+      "name": "미국"
     }
   ],
   "select": [

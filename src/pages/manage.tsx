@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Table } from "antd";
 
 import channeldata from "../data/channel.json";
@@ -11,17 +11,25 @@ import CustomModal from "../components/elements/Modal";
 import CustomInput from "../components/elements/Input";
 import CustomButton from "../components/elements/Button";
 
-interface RowType {
+interface ChannelRowType {
   key: number;
   name: string;
   url: string;
   group: string;
   flag: string;
 }
+interface GroupType {
+  id: number;
+  name: string;
+  type: "update" | "delete";
+}
 
 function Manage() {
   const { openModal, closeModal, isOpen } = useModal();
-  const [selectRow, setSelectRow] = useState<RowType>();
+
+  const [selectChannel, setSelectChannel] = useState<ChannelRowType>();
+  const [selectGroup, setSelectGroup] = useState<GroupType>();
+  const [newGroup, setNewGroup] = useState<GroupType>();
 
   const channelcolumns = [
     {
@@ -47,11 +55,19 @@ function Manage() {
     },
   ];
 
+  useEffect(() => {
+    if (selectGroup?.type === "delete") {
+      if (confirm(`${selectGroup?.name} 그룹을 삭제하시겠습니까? 하위 채널은 기본그룹으로 이동됩니다.`)) {
+        console.log("test");
+      }
+    }
+  }, [selectGroup]);
+
   return (
-    <div className="flex flex-col w-full gap-8 sm:px-5 md:px-5">
-      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-[6fr_4fr] xl:grid-cols-[6fr_4fr]">
+    <div className="flex flex-col w-full h-full gap-8 sm:px-5 md:px-5">
+      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-[6fr_4fr] xl:grid-cols-[6fr_4fr] h-full">
         <div className="flex gap-6">
-          <CustomSelect label="그룹명" options={groupdata.select} />
+          <CustomSelect label="그룹명" options={groupdata.select} defaultValue="전체" />
           <CustomSelect
             label="수집여부"
             options={[
@@ -59,6 +75,7 @@ function Manage() {
               { value: "수집중", label: "수집중" },
               { value: "중지", label: "중지" },
             ]}
+            defaultValue="전체"
           />
         </div>
         <div className="flex justify-end">
@@ -71,7 +88,7 @@ function Manage() {
               onRow={(record, _rowIndex) => {
                 return {
                   onClick: () => {
-                    setSelectRow(record);
+                    setSelectChannel(record);
                     openModal("updateChannel");
                   },
                 };
@@ -79,12 +96,20 @@ function Manage() {
               columns={channelcolumns as any}
               dataSource={channeldata.table}
               pagination={false}
+              scroll={{ y: "100%" }}
             />
           }
         />
         <CustomCard
           title="그룹 관리"
-          content={<CustomList data={groupdata.list} action={true} isUpdate={() => openModal("updateGroup")} />}
+          content={
+            <CustomList
+              data={groupdata.list}
+              action={true}
+              isUpdate={() => openModal("updateGroup")}
+              setState={setSelectGroup}
+            />
+          }
         />
       </div>
       <CustomModal
@@ -94,22 +119,22 @@ function Manage() {
         onCancel={() => closeModal("updateChannel")}
         content={
           <div className="flex flex-col justify-start gap-4">
-            <CustomSelect label="그룹명" options={groupdata.select} value={selectRow?.group} />
+            <CustomSelect label="그룹명" options={groupdata.select} value={selectChannel?.group} />
             <CustomInput
               label="이름"
-              value={selectRow?.name || ""}
-              onChange={(e) => setSelectRow({ ...selectRow, name: e.target.value })}
+              value={selectChannel?.name || ""}
+              onChange={(e) => setSelectChannel({ ...selectChannel, name: e.target.value })}
             />
             <CustomInput
               label="URL"
-              value={selectRow?.url || ""}
-              onChange={(e) => setSelectRow({ ...selectRow, url: e.target.value })}
+              value={selectChannel?.url || ""}
+              onChange={(e) => setSelectChannel({ ...selectChannel, url: e.target.value })}
             />
             <div className="grid items-center grid-cols-[1fr_4fr] gap-3 text-sm">
-              <p>수집여부</p>
+              <p className="text-center">수집여부</p>
               <div className="flex gap-3">
-                <CustomButton text="수집" type={selectRow?.flag === "수집" ? "default" : "disabled"} />
-                <CustomButton text="중지" type={selectRow?.flag === "중지" ? "default" : "disabled"} />
+                <CustomButton text="수집" type={selectChannel?.flag === "수집" ? "default" : "disabled"} />
+                <CustomButton text="중지" type={selectChannel?.flag === "중지" ? "default" : "disabled"} />
               </div>
             </div>
           </div>
@@ -117,23 +142,31 @@ function Manage() {
       />
       <CustomModal
         isOpen={isOpen("createGroup")}
-        title="그룹생성"
+        title="그룹 생성"
         onOk={() => closeModal("createGroup")}
         onCancel={() => closeModal("createGroup")}
         content={
           <div className="flex flex-col justify-start gap-4">
-            <CustomInput label="그룹명" value={""} onChange={(e) => console.log(e.target.value)} />
+            <CustomInput
+              label="그룹명"
+              value={newGroup?.name}
+              onChange={(e) => setNewGroup({ ...selectGroup, name: e.target.value })}
+            />
           </div>
         }
       />
       <CustomModal
         isOpen={isOpen("updateGroup")}
-        title="그룹수정"
+        title="그룹 수정"
         onOk={() => closeModal("updateGroup")}
         onCancel={() => closeModal("updateGroup")}
         content={
           <div className="flex flex-col justify-start gap-4">
-            <CustomInput label="그룹명" value={""} onChange={(e) => console.log(e.target.value)} />
+            <CustomInput
+              label="그룹명"
+              value={selectGroup?.name}
+              onChange={(e) => setSelectGroup({ ...selectGroup, name: e.target.value })}
+            />
           </div>
         }
       />
