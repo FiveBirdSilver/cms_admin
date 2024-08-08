@@ -10,9 +10,9 @@ import CustomList from "../components/elements/List";
 
 function View() {
   return (
-    <div className="flex flex-col w-full gap-8 sm:px-5 md:px-5">
+    <div className="flex flex-col w-full gap-8 px-5">
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-[6fr_4fr] xl:grid-cols-[6fr_4fr] lg:grid-rows-[0fr_9fr] xl:grid-rows-[0fr_9fr] h-full">
-        <div className="flex gap-6">
+        <div className="flex flex-col items-start gap-6 md:flex-row lg:flex-row xl:flex-row">
           <CustomSelect label="채널명" options={channelSelect.select} defaultValue="전체" />
           <CustomDatepicker />
         </div>
